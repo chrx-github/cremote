@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(taskone)
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(appone main.cpp)
+target_link_libraries(appone ${OpenCV_LIBS})
+target_include_directories(appone PRIVATE ${OpenCV_INCLUDE_DIRS})
